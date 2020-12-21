@@ -1,0 +1,33 @@
+---
+title: "How Endogenous Caused Heteroskedasticity?"
+subtitle: A Simulation Study
+author: "Zheyi Shen"
+date: "21/12/2020"
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js # {highlight.js, prettify, highlight}
+hitheme     : tomorrow       # zenburn 
+widgets     : [bootstrap, quiz] # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Heteroskedasticity
+The heteroskedasticity problem would be in presence when variances of error terms are not constant.
+This would increase the variance of coefficient estimate, reducing the liability of our estimate.
+
+---
+## Endogenous variable
+Regressors correlated with the error term are endogenous, and will caused heteroskedasticity.
+
+---
+## Example: Y = beta0 + beta1*X + u, u ~ N(0, f(x))
+- f(x) = x^2  
+- f(x) = sqrt(x) 
+- f(x) = exp(x)  
+- f(x) = x^(-1)  
+
+----
+## Simulation illustration
+See how the error term variance changes when specified different functional form and number of observations:
+
+[Shiny Example](https://zoey1102.shinyapps.io/heteroskedasticity/)
